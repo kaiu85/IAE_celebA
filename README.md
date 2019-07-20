@@ -15,3 +15,15 @@ To start training the model, change the paths in the IAE_release.py script to po
 python IAE_release.py
 
 A log-file showing the relevant discriminator, regularizer, encoder and generator losses will be created, as well as .png files showing samples, reconstructions and interpolations from the current model. 
+
+Some results in terms of sampling:
+
+![Alt text](samples_iae.jpg?raw=true "IAE Samples")
+
+Some results in terms of encoding:
+
+![Alt text](encoding_iae.jpg?raw=true "IAE Reconstruction")
+
+Encoding using a Variational Autoencoder with very similar architecture and same dimensionality of images and latent space:
+
+![Alt text](encoding_vae.jpg?raw=true "IAE Reconstruction")
