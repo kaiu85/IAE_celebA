@@ -40,15 +40,17 @@ n_save_images = 100 # save samples everyth n-th update step
 batch_size = 128 # size of mini-batches
 lr_disc = 2e-4 # learning rate for parameters of discriminator and regularizer
 lr_gen = 2e-4 # learning rate for parameters of encoder and decoder
-train_epoch = 200
+train_epoch = 200 # number of epochs to train
 k_update = 10 # number of update steps for discriminator and regularizer per update step for encoder and decoder
 regularize_R = False # Should the gradients of the regularizer be regularized to stabilize convergence (c.f. https://arxiv.org/abs/1801.04406)
 reg_param_R = 0.1 # corresponding regularization weight
 regularize_D = False # Should the gradients of the discriminator be regularized to stabilize convergence (c.f. https://arxiv.org/abs/1801.04406)
 reg_param_D = 0.1 # corresponding regularization weight
 
-upper_bound_D = 1.0
-upper_bound_R = 0.5
+upper_bound_D = 1.0 # discriminator network will be updated iteratively until the discriminator loss is below this
+                    # threshold or k_update updates are reached
+upper_bound_R = 0.5 # regularizer network will be updated iteratively until the discriminator loss is below this
+                    # threshold or k_update updates are reached
 
 clip_grad = True # should gradients be clipped
 clip_norm = 0.25 # maximum value of the norm of gradients
