@@ -14,7 +14,7 @@ from numpy.linalg import norm
 
 # training parameters
 batch_size = 128 # size of mini-batches
-lr_gen = 2e-4 # learning rate for parameters of encoder and decoder
+lr_gen = 3e-4 # learning rate for parameters of encoder and decoder
 train_epoch = 200 # number of epochs to train
 clip_grad = True # should gradients be clipped
 clip_norm = 0.25 # maximum value of the norm of gradients
@@ -33,7 +33,7 @@ n_hidden_discriminator = 1000 # dimensionality of discriminator
 model_dim = 128 # scale parameter used to control the number of channels used in the convolutional architecture
 continue_training = False # False: Training starts from scratch and old checkpoints will be overwritten.
                           # True: the last checkpoint is loaded and training progresses from there. 
-sig_min = 0.01 # Minimum value of standard-deviation of Gaussian densities on latent and image space
+sig_min = 1.0 # Minimum value of standard-deviation of Gaussian densities on latent and image space
 
 torch.cuda.set_device(0)
 
